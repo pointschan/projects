@@ -1,0 +1,3 @@
+GET,http://offers-ft.lxc.points.com:1300/offers/
+GET,http://offers-ft.lxc.points.com:1300/offers/offer123
+POST,http://offers-ft.lxc.points.com:1300/offers/
