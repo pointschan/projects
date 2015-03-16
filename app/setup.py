@@ -6,14 +6,14 @@ except ImportError:
 config = {
     'description': 'Learning Python',
     'author': 'pointschan',
-    'url': 'URL to get it at.',
-    'download_url': 'Where to download it.',
-    'author_email': 'My email.',
+    'url': '',
+    'download_url': '',
+    'author_email': 'my email',
     'version': '0.1',
     'install_requires': ['nose'],
     'packages': ['control'],
     'scripts': [],
-    'name': 'control'
+    'name': 'Projects'
 }
 
 setup(**config)

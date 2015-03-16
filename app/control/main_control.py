@@ -8,9 +8,10 @@ script, env = argv
 file_location =  "/home/vagrant/workspaces/projects/app/docs/"
 stagingUrlFileName = "staging_url.txt"
 ftUrlFileName = "ft_url.txt"
-urlList = []
+
 
 def getUrlfile(filename):
+    urlList = []
     try:
         f = open(os.path.join(file_location, filename))
     except IOError:
@@ -19,6 +20,7 @@ def getUrlfile(filename):
         for line in f:
             urlList.append(line.rstrip('\n'))
         f.close()
+        return urlList
 
 def processUrl():
     while urlList:
@@ -28,11 +30,13 @@ def processUrl():
 
 
 if env=="staging":
-    getUrlfile(stagingUrlFileName)
+    urlList = getUrlfile(stagingUrlFileName)
 elif env=="ft":
-    getUrlfile(ftUrlFileName)
+    urlList = getUrlfile(ftUrlFileName)
 else:
     print ("%s is not a valid environment") % env
+
+print urlList
 
 if urlList:
     processUrl()
