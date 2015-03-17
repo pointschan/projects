@@ -73,7 +73,7 @@ wordsLongerThanNList, n = findWordsLongerThanN(listOfWords,randint(6,len(listOfW
 print ("List of words:"+str(listOfWords))
 print ("List of wordlength:"+str(listOfWordsLength))
 print ("Longest Word length:"+' '+str(longestWordLength)+' '+str(listOfWordsLongestWords))
-print ("n: "+str(n)+' '+str(wordsLongerThanNList))
+print ("n="+str(n)+' '+str(wordsLongerThanNList))
 
 
 
