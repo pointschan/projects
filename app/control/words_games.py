@@ -1,16 +1,10 @@
-
-
 __author__ = 'pointschan'
-
-
 
 import os
 from random import randint
 
 file_location =  "/home/vagrant/workspaces/projects/app/docs/"
 fn = "words_list.txt"
-
-
 
 #Write a program that maps a list of words into a
 #list of integers representing the lengths of the corresponding words.
@@ -31,13 +25,12 @@ def getListOfWordsFile(filename):
         f.close()
         return b
 
-
-
 def mapListOfWordsToListOfWordsLength(templist):
     listOfInts = []
     for i in range(len(templist)):
         listOfInts.append(len(templist[i]))
     return listOfInts
+
 
 #Write a function find_longest_word() that takes a list of words and returns the length of the longest one
 def findLongestWords(templist):
@@ -52,7 +45,6 @@ def findLongestWords(templist):
             tmpLongestWordsList.append(member)
     return tmpLongestWordLength, tmpLongestWordsList
 
-
 #Write a function filter_long_words() that takes a list of words and an integer n and returns the list of words that are longer than n.
 def findWordsLongerThanN(tmplist, n):
     tmpWordsLongerthanNList = []
@@ -60,8 +52,6 @@ def findWordsLongerThanN(tmplist, n):
         if len(member) > n:
             tmpWordsLongerthanNList.append(member)
     return tmpWordsLongerthanNList, n
-
-
 
 #List of words:['wordOne', 'wordTwo', 'wordThree', 'wordFour', 'wordFive', 'wordSix', 'wordSeven', 'wordEight', 'wordNine', 'wordTen']
 listOfWords = getListOfWordsFile(fn)
@@ -74,8 +64,3 @@ print ("List of words:"+str(listOfWords))
 print ("List of wordlength:"+str(listOfWordsLength))
 print ("Longest Word length:"+' '+str(longestWordLength)+' '+str(listOfWordsLongestWords))
 print ("n="+str(n)+' '+str(wordsLongerThanNList))
-
-
-
-
-

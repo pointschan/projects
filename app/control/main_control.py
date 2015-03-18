@@ -10,7 +10,6 @@ stagingUrlFileName = "staging_url.txt"
 ftUrlFileName = "ft_url.txt"
 urlList = []
 
-
 #Open and read a file line by line and append each line into urlList
 def getUrlfile(filename):
     tmpUrlList = []
@@ -42,5 +41,3 @@ print "Url list from file: "+str(urlList)
 
 if urlList:
     processUrl()
-
-
