@@ -32,6 +32,13 @@ def mapListOfWordsToListOfWordsLength(templist):
     return listOfInts
 
 
+def mapListOfWordsToListOfWordsLengthWithListComprehensionMethod(templist):
+    """
+    the above function can be done in 1 line, to use list comprehension
+    """
+    LC_listOfInts = [len(x) for x in templist]
+    return LC_listOfInts
+
 #Write a function find_longest_word() that takes a list of words and returns the length of the longest one
 def findLongestWords(templist):
     tmpLongestWordsList = []
@@ -56,11 +63,14 @@ def findWordsLongerThanN(tmplist, n):
 #List of words:['wordOne', 'wordTwo', 'wordThree', 'wordFour', 'wordFive', 'wordSix', 'wordSeven', 'wordEight', 'wordNine', 'wordTen']
 listOfWords = getListOfWordsFile(fn)
 listOfWordsLength = mapListOfWordsToListOfWordsLength(listOfWords)
+LC_lowl = mapListOfWordsToListOfWordsLengthWithListComprehensionMethod(listOfWords)
 longestWordLength, listOfWordsLongestWords = findLongestWords(listOfWords)
 wordsLongerThanNList, n = findWordsLongerThanN(listOfWords,randint(6,len(listOfWords)))
 
 
 print ("List of words:"+str(listOfWords))
 print ("List of wordlength:"+str(listOfWordsLength))
+print ("List of wordlength LC: "+str(LC_lowl))
 print ("Longest Word length:"+' '+str(longestWordLength)+' '+str(listOfWordsLongestWords))
 print ("n="+str(n)+' '+str(wordsLongerThanNList))
+
