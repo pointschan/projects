@@ -51,7 +51,7 @@ def scan_files(list_of_files_):
         c = []
 
         try:
-            f = open(file)
+            f = open(file, "r")
         except IOError:
             print "Cannot open %s permission denied" % file
         else:
@@ -62,6 +62,7 @@ def scan_files(list_of_files_):
                     a = a.strip()+' '+' '.join(line.split())
             b = a.split(' ')
             f.close()
+
         for i in range(len(b)):
             if b[i].lower() == 'can':
                 if i >= 2 and i <= (len(b)-3): #skip if the first two words or last two words are 'can', example 'can can'
@@ -72,12 +73,14 @@ def scan_files(list_of_files_):
                     c.append(d)
                     total.append(d)
 
+        #output occurrences for individual file
         if c:
             tmp_li = list(set(c))
             print file
             for i in range(len(tmp_li)):
                 print tmp_li[i]+' '+str(c.count(tmp_li[i]))
 
+    #output total occurrences from all files
     if total:
         tmp_li = list(set(total))
         print "******************************************"
@@ -85,19 +88,6 @@ def scan_files(list_of_files_):
         print "******************************************"
         for i in range(len(tmp_li)):
             print tmp_li[i]+' '+str(total.count(tmp_li[i]))
-
-
-
-    # for i in range(len(b)):
-    #     if b[i].lower() == 'can':
-    #         if i >= 2 and i <= (len(b)-3): #skip if first
-    #             d = str(b[i-2]).strip()+' '+\
-    #                 str(b[i-1]).strip()+' '+\
-    #                 str(b[i+1]).strip()+' '+\
-    #                 str(b[i+2]).strip()
-    #             c.append(d)
-        # print b[i]
-
 
 
 if __name__ == "__main__":
@@ -110,11 +100,6 @@ if list_of_files:
 else:
     print "There are no files to scan"
 
-
-# print list_of_files
-
-#list_of_result = scan_files(list_of_files)
-# print list_of_result
 
 
 
