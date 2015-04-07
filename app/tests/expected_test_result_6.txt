@@ -1,0 +1,9 @@
+Directory is /home/vagrant/workspaces/projects/app/docs/
+/home/vagrant/workspaces/projects/app/docs/can1.txt
+Sure! you do what 2
+think you do for 1
+******************************************
+    Total occurrences from all files
+******************************************
+Sure! you do what 2
+think you do for 1

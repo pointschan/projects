@@ -1,0 +1,35 @@
+Directory is /home/vagrant/workspaces/projects/
+/home/vagrant/workspaces/projects/app/docs/can1.txt
+Sure! you do what 2
+think you do for 1
+/home/vagrant/workspaces/projects/app/tests/expected_test_result_7.txt
+files ****************************************** can What 1
+/home/vagrant/workspaces/docs/can2.doc Can What do 1
+****************************************** Can What do 1
+/home/vagrant/workspaces/docs/ /home/vagrant/workspaces/docs/can2.doc can What 1
+/home/vagrant/workspaces/projects/app/tests/expected_test_result_8.txt
+files ****************************************** What 1 2
+2 ****************************************** What do 1
+1 ****************************************** What do 1
+1 /home/vagrant/workspaces/docs/can2.doc What do 2
+/home/vagrant/workspaces/docs/ /home/vagrant/workspaces/docs/can2.doc What 1 2
+/home/vagrant/workspaces/projects/app/tests/expected_test_result_4.txt
+/home/vagrant/workspaces/docs /home/vagrant/workspaces/docs/can2.doc can What 1
+/home/vagrant/workspaces/docs/can2.doc Can What do 1
+****************************************** Can What do 1
+files ****************************************** can What 1
+******************************************
+    Total occurrences from all files
+******************************************
+/home/vagrant/workspaces/docs /home/vagrant/workspaces/docs/can2.doc can What 1
+1 /home/vagrant/workspaces/docs/can2.doc What do 2
+files ****************************************** What 1 2
+Sure! you do what 2
+****************************************** Can What do 2
+/home/vagrant/workspaces/docs/ /home/vagrant/workspaces/docs/can2.doc can What 1
+files ****************************************** can What 2
+/home/vagrant/workspaces/docs/can2.doc Can What do 2
+1 ****************************************** What do 1
+/home/vagrant/workspaces/docs/ /home/vagrant/workspaces/docs/can2.doc What 1 2
+think you do for 1
+2 ****************************************** What do 1

@@ -1,14 +1,24 @@
 __author__ = 'pointschan'
 
 import getopt
+from StringIO import StringIO
 import sys
 import os
 # from __future__ import print_function
+
+# old_stdout = sys.stdout
+# test_result = StringIO()
+# sys.stdout = test_result
 
 list_of_files = []
 list_of_result = []
 
 def main(argv):
+
+    old_stdout = sys.stdout
+    test_result = StringIO()
+    sys.stdout = test_result
+
     tmp_directory = ''
     USAGE = 'usage: traverse.py -d <directory>'
     try:
@@ -19,16 +29,31 @@ def main(argv):
     for opt, arg in opts:
         if opt in ('-h', '--help'):
             print USAGE
-            sys.exit()
+            sys.exit(0)
         elif opt in ('-d', '--directory'):
             tmp_directory = arg
 
     if not tmp_directory:
         print USAGE
-        sys.exit()
+        sys.exit(0)
     elif tmp_directory == '.':
         tmp_directory = os.getcwd()
-    return tmp_directory
+
+    print 'Directory is', tmp_directory
+
+    #if directory argument
+    list_of_files = get_list_of_files(tmp_directory)
+    if list_of_files:
+        scan_files(list_of_files)
+    else:
+        print "There are no files to scan"
+
+    sys.stdout = old_stdout
+    result_string = test_result.getvalue()
+    if result_string:
+        print result_string
+
+    return result_string
 
 
 def get_list_of_files(directory_):
@@ -89,20 +114,14 @@ def scan_files(list_of_files_):
         for i in range(len(tmp_li)):
             print tmp_li[i]+' '+str(total.count(tmp_li[i]))
 
+# def output(string):
+#     sys.stdout = old_stdout
+#     result_string = test_result.getvalue()
+#     print "result_string=", result_string
+#     sys.exit(status)
 
 if __name__ == "__main__":
-   directory = main(sys.argv[1:])
-print 'Directory is "', directory
-
-list_of_files = get_list_of_files(directory)
-if list_of_files:
-    scan_files(list_of_files)
-else:
-    print "There are no files to scan"
-
-
-
-
+   main(sys.argv[1:])
 
 
 

@@ -1,0 +1,17 @@
+Directory is /home/vagrant/workspaces/docs
+/home/vagrant/workspaces/docs/can2.doc
+Can can What do 1
+Sure! you do what 2
+think you do for 2
+/home/vagrant/workspaces/docs/can1.txt
+Sure! you do what 2
+think you do for 1
+Cannot open /home/vagrant/workspaces/docs/can3.txt permission denied
+Cannot open /home/vagrant/workspaces/docs/can2.txt permission denied
+Cannot open /home/vagrant/workspaces/docs/documents/can4.txt permission denied
+******************************************
+    Total occurrences from all files
+******************************************
+Can can What do 1
+Sure! you do what 4
+think you do for 3
