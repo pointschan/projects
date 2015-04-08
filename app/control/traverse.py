@@ -15,29 +15,32 @@ list_of_result = []
 
 def main(argv):
 
-    old_stdout = sys.stdout
-    test_result = StringIO()
-    sys.stdout = test_result
-
     tmp_directory = ''
     USAGE = 'usage: traverse.py -d <directory>'
     try:
         opts, args = getopt.getopt(argv,"hd:",["directory="])
     except getopt.GetoptError:
         print USAGE
-        sys.exit(2)
+        return USAGE
+        # sys.exit(2)
     for opt, arg in opts:
         if opt in ('-h', '--help'):
             print USAGE
-            sys.exit(0)
+            return USAGE
+            # sys.exit(0)
         elif opt in ('-d', '--directory'):
             tmp_directory = arg
 
     if not tmp_directory:
         print USAGE
-        sys.exit(0)
+        return USAGE
+        # sys.exit(0)
     elif tmp_directory == '.':
         tmp_directory = os.getcwd()
+
+    old_stdout = sys.stdout
+    test_result = StringIO()
+    sys.stdout = test_result
 
     print 'Directory is', tmp_directory
 

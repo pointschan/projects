@@ -17,11 +17,22 @@ class test_traverse(unittest.TestCase):
         self.test_case_5 = ['-d', 'xxx']
         self.test_case_6 = ['-d', '/home/vagrant/workspaces/projects/app/docs/']
         self.test_case_7 = ['-d', '/home/vagrant/workspaces/docs/']
+        self.test_case_8 = ['anything', 'anything']
 
-    # def test_case_1(self):
-    #     result = main(self.test_case_1)
-    #     print result
-    #     self.assertEqual(result, 'usage: traverse.py -d <directory>')
+    def test_traverse_case_1(self):
+        result = main(self.test_case_1)
+        print result
+        self.assertEqual(result, 'usage: traverse.py -d <directory>')
+
+    def test_traverse_case_2(self):
+        result = main(self.test_case_2)
+        print result
+        self.assertEqual(result, 'usage: traverse.py -d <directory>')
+
+    def test_traverse_case_3(self):
+        result = main(self.test_case_3)
+        print result
+        self.assertEqual(result, 'usage: traverse.py -d <directory>')
 
     def test_traverse_case_4(self):
         os.chdir('/home/vagrant/workspaces/docs')
@@ -52,6 +63,12 @@ class test_traverse(unittest.TestCase):
         result = main(self.test_case_7)
         # print result
         self.assertEqual(result, expected_result)
+
+    def test_traverse_case_8(self):
+        result = main(self.test_case_8)
+        print result
+        self.assertEqual(result, 'usage: traverse.py -d <directory>')
+
 
 if __name__ == '__main__':
     unittest.main()
