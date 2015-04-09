@@ -6,10 +6,6 @@ import sys
 import os
 # from __future__ import print_function
 
-# old_stdout = sys.stdout
-# test_result = StringIO()
-# sys.stdout = test_result
-
 list_of_files = []
 list_of_result = []
 
@@ -101,7 +97,7 @@ def scan_files(list_of_files_):
                     c.append(d)
                     total.append(d)
 
-        #output occurrences for individual file
+        # output occurrences for individual file
         if c:
             tmp_li = list(set(c))
             print file
@@ -116,12 +112,6 @@ def scan_files(list_of_files_):
         print "******************************************"
         for i in range(len(tmp_li)):
             print tmp_li[i]+' '+str(total.count(tmp_li[i]))
-
-# def output(string):
-#     sys.stdout = old_stdout
-#     result_string = test_result.getvalue()
-#     print "result_string=", result_string
-#     sys.exit(status)
 
 if __name__ == "__main__":
    main(sys.argv[1:])
