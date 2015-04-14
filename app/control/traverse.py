@@ -4,6 +4,7 @@ import getopt
 from StringIO import StringIO
 import sys
 import os
+import re
 # from __future__ import print_function
 
 list_of_files = []
@@ -54,7 +55,6 @@ def main(argv):
 
     return result_string
 
-
 def get_list_of_files(directory_):
     tmp_list_of_files = []
     extension = ['.txt', '.doc']
@@ -70,8 +70,6 @@ def scan_files(list_of_files_):
     total = []
 
     for file in list_of_files_:
-        a = ''
-        b = []
         c = []
 
         try:
@@ -79,23 +77,12 @@ def scan_files(list_of_files_):
         except IOError:
             print "Cannot open %s permission denied" % file
         else:
-            for line in f:
-                if a == '':
-                    a = ' '.join(line.split())
-                else:
-                    a = a.strip()+' '+' '.join(line.split())
-            b = a.split(' ')
+            pattern = re.compile(r'(?=((?:^|(?<=\s))\S+\s+\S+)\s+can\s+(\S+\s+\S+(?=\s|$)))', re.I)
+            li = pattern.findall(' '.join(f.read().split()))
+            if li:
+                c = [' '.join(member) for member in li]
+                total.extend(c)
             f.close()
-
-        for i in range(len(b)):
-            if b[i].lower() == 'can':
-                if i >= 2 and i <= (len(b)-3): #skip if the first two words or last two words are 'can', example 'can can'
-                    d = str(b[i-2]).strip()+' '+\
-                        str(b[i-1]).strip()+' '+\
-                        str(b[i+1]).strip()+' '+\
-                        str(b[i+2]).strip()
-                    c.append(d)
-                    total.append(d)
 
         # output occurrences for individual file
         if c:
