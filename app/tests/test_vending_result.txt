@@ -1,0 +1,110 @@
+test_purchase_butter_beer_with_exact_amount_in_number (tests.test_vending.test_vending) ... ok
+test_purchase_butter_beer_with_exact_amount_in_string (tests.test_vending.test_vending) ... ok
+test_purchase_cool_cola_with_exact_amount_in_number (tests.test_vending.test_vending) ... ok
+test_purchase_cool_cola_with_exact_amount_in_number_6_decimal (tests.test_vending.test_vending) ... ok
+test_purchase_cool_cola_with_exact_amount_in_number_with_leading_zero (tests.test_vending.test_vending) ... ok
+test_purchase_cool_cola_with_exact_amount_in_string (tests.test_vending.test_vending) ... ok
+test_purchase_cool_cola_with_exact_amount_in_string_with_6_decimal (tests.test_vending.test_vending) ... ok
+test_purchase_cool_cola_with_extra_amount_in_integer_00100 (tests.test_vending.test_vending) ... FAIL
+test_purchase_cool_cola_with_extra_amount_in_integer_4 (tests.test_vending.test_vending) ... FAIL
+test_purchase_cool_cola_with_extra_amount_in_number_1 (tests.test_vending.test_vending) ... FAIL
+test_purchase_cool_cola_with_extra_amount_in_number_2 (tests.test_vending.test_vending) ... ok
+test_purchase_cool_cola_with_extra_amount_in_string_integer (tests.test_vending.test_vending) ... FAIL
+test_purchase_cool_cola_with_extra_amount_in_string_with_2_decimal (tests.test_vending.test_vending) ... FAIL
+test_purchase_cool_cola_with_invalid_pay_amount_none (tests.test_vending.test_vending) ... FAIL
+test_purchase_cool_cola_with_invalid_pay_amount_string (tests.test_vending.test_vending) ... FAIL
+test_purchase_cool_cola_with_leading_spaces (tests.test_vending.test_vending) ... ok
+test_purchase_cool_cola_with_not_enough_coins_1 (tests.test_vending.test_vending) ... ok
+test_purchase_cool_cola_with_not_enough_coins_2 (tests.test_vending.test_vending) ... FAIL
+test_purchase_cool_cola_with_not_enough_coins_3 (tests.test_vending.test_vending) ... ok
+test_purchase_cool_cola_with_not_enough_coins_4 (tests.test_vending.test_vending) ... ok
+test_purchase_cool_cola_with_not_enough_coins_5 (tests.test_vending.test_vending) ... ok
+test_purchase_cool_cola_with_not_enough_coins_6 (tests.test_vending.test_vending) ... ok
+test_purchase_cool_cola_with_trailing_spaces (tests.test_vending.test_vending) ... ok
+test_purchase_mighty_mist_with_exact_amount_in_number (tests.test_vending.test_vending) ... ok
+test_purchase_mighty_mist_with_exact_amount_in_string (tests.test_vending.test_vending) ... ok
+test_purchase_pop_with_invalid_selection_ (tests.test_vending.test_vending) ... ok
+test_purchase_pop_with_invalid_selection_Coooool_Cola (tests.test_vending.test_vending) ... ok
+test_purchase_pop_with_invalid_selection_None (tests.test_vending.test_vending) ... ok
+test_purchase_pop_with_non_defined_invalid_pop_selection (tests.test_vending.test_vending) ... FAIL
+test_purchase_pop_with_numeric_pop_selection (tests.test_vending.test_vending) ... ok
+
+======================================================================
+FAIL: test_purchase_cool_cola_with_extra_amount_in_integer_00100 (tests.test_vending.test_vending)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vagrant/workspaces/projects/app/tests/test_vending.py", line 114, in test_purchase_cool_cola_with_extra_amount_in_integer_00100
+    self.assertEqual(96.41, amount_returned)
+AssertionError: 96.41 != 60.41
+
+======================================================================
+FAIL: test_purchase_cool_cola_with_extra_amount_in_integer_4 (tests.test_vending.test_vending)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vagrant/workspaces/projects/app/tests/test_vending.py", line 107, in test_purchase_cool_cola_with_extra_amount_in_integer_4
+    self.assertEqual(0.41, amount_returned)
+AssertionError: 0.41 != 0.41000000000000014
+
+======================================================================
+FAIL: test_purchase_cool_cola_with_extra_amount_in_number_1 (tests.test_vending.test_vending)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vagrant/workspaces/projects/app/tests/test_vending.py", line 93, in test_purchase_cool_cola_with_extra_amount_in_number_1
+    self.assertEqual(0.41, amount_returned)
+AssertionError: 0.41 != 0.41000000000000014
+
+======================================================================
+FAIL: test_purchase_cool_cola_with_extra_amount_in_string_integer (tests.test_vending.test_vending)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vagrant/workspaces/projects/app/tests/test_vending.py", line 128, in test_purchase_cool_cola_with_extra_amount_in_string_integer
+    self.assertEqual(0.41, amount_returned)
+AssertionError: 0.41 != 0.41000000000000014
+
+======================================================================
+FAIL: test_purchase_cool_cola_with_extra_amount_in_string_with_2_decimal (tests.test_vending.test_vending)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vagrant/workspaces/projects/app/tests/test_vending.py", line 121, in test_purchase_cool_cola_with_extra_amount_in_string_with_2_decimal
+    self.assertEqual(0.41, amount_returned)
+AssertionError: 0.41 != 0.41000000000000014
+
+======================================================================
+FAIL: test_purchase_cool_cola_with_invalid_pay_amount_none (tests.test_vending.test_vending)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vagrant/workspaces/projects/app/tests/test_vending.py", line 169, in test_purchase_cool_cola_with_invalid_pay_amount_none
+    self.assertEqual('Fix this: exception not caught, invalid amount None!', context.exception.message)
+AssertionError: 'Fix this: exception not caught, invalid amount None!' != 'float() argument must be a string or a number'
+
+======================================================================
+FAIL: test_purchase_cool_cola_with_invalid_pay_amount_string (tests.test_vending.test_vending)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vagrant/workspaces/projects/app/tests/test_vending.py", line 174, in test_purchase_cool_cola_with_invalid_pay_amount_string
+    self.assertEqual('Fix this: Exception not caught, invalid amount!', context.exception.message)
+AssertionError: 'Fix this: Exception not caught, invalid amount!' != 'could not convert string to float: INVALID'
+
+======================================================================
+FAIL: test_purchase_cool_cola_with_not_enough_coins_2 (tests.test_vending.test_vending)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vagrant/workspaces/projects/app/tests/test_vending.py", line 141, in test_purchase_cool_cola_with_not_enough_coins_2
+    self.assertEqual('Not enough coins. Insert 0.0 more!', context.exception.message)
+AssertionError: 'Not enough coins. Insert 0.0 more!' != 'Not enough coins. Insert 0.001112 more!'
+
+======================================================================
+FAIL: test_purchase_pop_with_non_defined_invalid_pop_selection (tests.test_vending.test_vending)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/vagrant/workspaces/projects/app/tests/test_vending.py", line 215, in test_purchase_pop_with_non_defined_invalid_pop_selection
+    self.assertEqual('Invalid selection: pop100', context.exception.message)
+AssertionError: 'Invalid selection: pop100' != "global name 'pop100' is not defined"
+
+Name              Stmts   Miss  Cover   Missing
+-----------------------------------------------
+control.vending      13      0   100%   
+----------------------------------------------------------------------
+Ran 30 tests in 0.005s
+
+FAILED (failures=9)
