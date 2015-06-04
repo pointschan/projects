@@ -24,4 +24,4 @@ def vend_pop(pop_selection, money_amount_paid):
     print "Here's some pop: {}".format(pop_selection)
     if amount_paid < cost:
         raise ValueError('Not enough coins. Insert {} more!'.format(cost - amount_paid))
-    return amount_paid - cost
+    return round((amount_paid - cost), 2)
